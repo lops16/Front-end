@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useUser } from "../UserContext";
 import "../styles/Header.scss";
 
-export default function Header({ onSearch, toggleLoginPopup }) {
+export default function Header({ onSearch }) {
 	let location = useLocation();
 	let navigate = useNavigate();
 
@@ -33,10 +33,7 @@ export default function Header({ onSearch, toggleLoginPopup }) {
 				{loginUser !== null ? (
 					<>
 						<div className="userMenu">
-							<Link
-								to={loginUser ? "/usuarios" : "/"}
-								onClick={toggleLoginPopup}
-							>
+							<Link to={loginUser ? "/usuarios" : "/login"}>
 								<i className="bx bx-user"></i>
 							</Link>
 
@@ -46,7 +43,7 @@ export default function Header({ onSearch, toggleLoginPopup }) {
 					</>
 				) : location.pathname === "/" ? (
 					<>
-						<Link to={loginUser ? "/usuarios" : "/"} onClick={toggleLoginPopup}>
+						<Link to={loginUser ? "/usuarios" : "/login"}>
 							<div className="userMenu">
 								<i className="bx bx-user"></i>
 								<h4>Login</h4>
@@ -55,7 +52,7 @@ export default function Header({ onSearch, toggleLoginPopup }) {
 					</>
 				) : !location.pathname.includes("login") ? (
 					<>
-						<Link to={loginUser ? "/usuarios" : "/"} onClick={toggleLoginPopup}>
+						<Link to={loginUser ? "/usuarios" : "/login"}>
 							<div className="userMenu">
 								<i className="bx bx-user"></i>
 								<h4>Login</h4>

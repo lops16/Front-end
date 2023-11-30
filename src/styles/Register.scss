@@ -2,24 +2,69 @@
 @import './_mixins';
 
 
-main{
-    height: 100%;
-}
+
+
 .regContainer{
-    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/Background-animated.gif);
+    height: 800px;
+
+    &__box{
+        background-color: white;
+        width: 25%;
+    border-radius: $box-radious;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 0;
+    height: 600px;
+    box-shadow: 13px 7px 18px -3px rgba(242, 242, 242, 0.209);
+    }
+    &__reg{
+        width: 70%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
 
-}
-.regImg{
-    width: 40%;
-    height: 700px;
-    
-    background-image: url("../images/so-i-expanded-my-paint-setup-a-bit-by-adding-a-bottle-of-v0-1eaj8hwqowk91.jpg");
-    background-size: 270%;
-    background-position: 25%, ;
+    .logBox{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        p{
+            font-size: 18px;
+        }
+    }
+
+   
+    h2{
+        font-size: $subTitle-size;
+        font-weight: $subTitle-weight;
+        color: $main-complementari;
+    }
+
+    button{
+        @include btnReg-big-style
+    }
+
+    input{
+        @include form-style
+    }
+
+    a{
+        font-size: 20px;
+        font-weight: 700;
+        color: $main-complementari;
+    }
 }
 
-button{
-    @include btnReg-big-style
-}
+

@@ -13,14 +13,13 @@
     "logo search search logMenu"
     "nav nav nav nav";
     gap: 2rem;
-    margin-bottom: 2rem;
   }
   .logo{
     grid-area: logo;
     width: 60%;
     background-color: aqua;
     height: 60px;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
   }
   .logMenu {
     grid-area: logMenu;
@@ -77,21 +76,24 @@
 
   nav{
     grid-area: nav;
-    height: 48px;
-    background-color: $fourdColor;
+    height: 35px;
     text-align: center;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 0.5rem;
 
-     ul{
+
+    ul{
       width: 10%;
       display: flex;
       justify-content: space-around;
       align-items: center;
+      
         li{
           width: 100%;
+          font-size: 23px;
           a{
             @include menuBtn-style
           }

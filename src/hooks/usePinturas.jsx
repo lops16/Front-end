@@ -6,7 +6,7 @@ export const usePinturas = () => {
 	const [pinturas, setPinturas] = useState([]);
 
 	const getPinturas = useCallback(
-		async (username, fetchRandom = false, count = 5) => {
+		async (username, fetchRandom = false, count = 6) => {
 			try {
 				const url = `http://localhost:3000/api/pinturas?username=${username}`;
 				const paint = await fetchPinturas(url);

@@ -1,33 +1,77 @@
 @import './_variables';
 @import './_mixins';
 
-
+.landingContainer{
+  display: flex;
+}
 .callAction{
-    width: 100%;
+  padding-top: 5rem;
+    width: 60%;
     height: auto;
-    margin-bottom: 1rem;
-}
-.callRegister{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 150px;
-    
-}
+    background: url(../images/landing-back.jpg), $landig-back-color;
+    background-repeat: no-repeat;
+    background-size: 100%;
 
-.btnReg{
-    @include btnReg-style;
+    &__callRegister{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 500px;
+      margin-left: 10rem;
+      
+      h1{
+        font-size: $bigTitle-size;
+        font-weight: $bigTitle-weight;
+        max-width: 70%;
+     
+      }
+
+      p{
+        font-size: $text-landing-size;
+        font-weight: $text-landing-weight;
+        max-width: 70%;
+        padding-top: 2rem;
+       
+        
+        
+      }
   }
 
 
+    button{
+      @include btnReg-style;
+    }
+
+    
+}
+
+
+
+
+
   .pinturaContainerLand{
+    background-color: $landig-back-color;
     display: grid;
     padding: 0.7rem;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
+    width: 50%;
+
+    &__card{
+      background-color: white;
+      text-align: center;
+      border: none;
+      border-radius: 0.7rem;
+      padding-top: 0.7rem;
+      transition: 0.3s;
+        &:hover{
+            border: solid $mainColor 1.5px;
+            box-shadow: 15px 13px 15px -3px rgba(0,0,0,0.1);
+            transform: translate(-5px, -15px);
+        }
+      
+    }
+    
   }
   

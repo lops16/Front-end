@@ -2,7 +2,9 @@
 
 @mixin btnReg-style{
     background-color: $mainColor;
-    color: $greyColor;
+    color: $offWhiteColor;
+    font-size: 17px;
+    font-weight: 500;
     padding: 1rem 3rem;
     cursor: pointer;
     border: none;
@@ -30,9 +32,10 @@
 
 @mixin menuBtn-style{
     color: $offWhiteColor;
-    padding: 0.9rem 1.5rem;
+    padding: 0.3rem 1.5rem;
     &:hover{
-        background-color: darken( $fourdColor, 7%);
+        color: white;
+        
     }
 
 }
@@ -46,7 +49,21 @@
 
     &:focus{
         outline: none;
-        border: 1px solid $thirdColor;
+        border: 1px solid $mainColor;
+        box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+}
+@mixin form-style{
+    height: 35px;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: $button-radious;
+    border: 0.7px solid grey;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $mainColor;
         box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
     }
 

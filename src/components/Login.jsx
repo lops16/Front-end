@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUser } from "../UserContext";
 import { Link, useNavigate } from "react-router-dom";
+import "../styles/Login.scss";
 
 export default function Login() {
 	const [user, setUser] = useState({ username: "", password: "" });
@@ -58,22 +59,36 @@ export default function Login() {
 	}
 	return (
 		<>
-			<form>
-				<input
-					onChange={handleInput}
-					type="text"
-					name="username"
-					placeholder="user"
-				/>
-				<input
-					onChange={handleInput}
-					type="password"
-					name="password"
-					placeholder="password"
-				/>
-				<button onClick={handleClick}>Login</button>
-				{/* <p>{user.username}</p> */}
-			</form>
+			<main>
+				<div className="logContainer">
+					<div className="logContainer__box">
+						<h2>Inicia sesión</h2>
+
+						<div className="logContainer__log">
+							<input
+								onChange={handleInput}
+								type="text"
+								name="username"
+								placeholder="user"
+							/>
+							<input
+								onChange={handleInput}
+								type="password"
+								name="password"
+								placeholder="password"
+							/>
+							<button onClick={handleClick}>Login</button>
+						</div>
+						<div className="logBox">
+							<p>¿No tienes cuenta?</p>
+							<Link to={"/register"}>Crea una nueva</Link>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			{/* <p>{user.username}</p> */}
+
 			<div>
 				{/* <Link to="/register">No tienes cuenta? Registrate</Link> */}
 			</div>

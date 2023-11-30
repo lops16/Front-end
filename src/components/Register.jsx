@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useUser } from "../UserContext";
 import "../styles/Register.scss";
 
@@ -58,7 +58,7 @@ export default function Register() {
 							console.log(username);
 							setLoginUser(newUser);
 							setWelcomeMessage(
-								`Bienvenido a hobby pinturas, ${username}! puede comenzar a crear tu biblioteca.`
+								`Bienvenido a hobby pinturas, ${username}! puedes comenzar a crear tu biblioteca.`
 							);
 							setTimeout(() => {
 								navigate("/pinturas");
@@ -86,32 +86,40 @@ export default function Register() {
 		<>
 			<main>
 				<div className="regContainer">
-					<div className="reg">
-						{formVisible && (
-							<form>
-								<input
-									onChange={handleInput}
-									type="text"
-									name="mail"
-									placeholder="email"
-								/>
-								<input
-									onChange={handleInput}
-									type="text"
-									name="username"
-									placeholder="user"
-								/>
-								<input
-									onChange={handleInput}
-									type="password"
-									name="password"
-									placeholder="password"
-								/>
-								<button onClick={handleClick}>Register</button>
-							</form>
-						)}
+					<div className="regContainer__box">
+						<h2>Registrate</h2>
+						<div className="regContainer__reg">
+							{formVisible && (
+								<>
+									<input
+										onChange={handleInput}
+										type="text"
+										name="mail"
+										placeholder="email"
+									/>
+									<input
+										onChange={handleInput}
+										type="text"
+										name="username"
+										placeholder="user"
+									/>
+									<input
+										onChange={handleInput}
+										type="password"
+										name="password"
+										placeholder="password"
+									/>
+									<button onClick={handleClick}>Register</button>
+									<div className="logBox">
+										<p>¿Ya tienes cuenta?</p>
 
-						<div>{welcomeMessage}</div>
+										<Link to={"/login"}>haz login</Link>
+									</div>
+								</>
+							)}
+
+							<div>{welcomeMessage}</div>
+						</div>
 					</div>
 				</div>
 			</main>
