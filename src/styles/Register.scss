@@ -1,0 +1,25 @@
+@import './_variables';
+@import './_mixins';
+
+
+main{
+    height: 100%;
+}
+.regContainer{
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+
+}
+.regImg{
+    width: 40%;
+    height: 700px;
+    
+    background-image: url("../images/so-i-expanded-my-paint-setup-a-bit-by-adding-a-bottle-of-v0-1eaj8hwqowk91.jpg");
+    background-size: 270%;
+    background-position: 25%, ;
+}
+
+button{
+    @include btnReg-big-style
+}

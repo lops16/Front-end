@@ -1,0 +1,77 @@
+@import './_variables';
+
+@mixin btnReg-style{
+    background-color: $mainColor;
+    color: $greyColor;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border: none;
+    border-radius: $button-radious;
+
+    &:hover{
+        background-color: darken($mainColor, 5%);
+    }
+}
+@mixin btnReg-big-style{
+    background-color: $mainColor;
+    color:$offWhiteColor;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 0.5rem 6rem;
+    cursor: pointer;
+    border: none;
+    border-radius: $button-radious;
+
+    &:hover{
+        background-color: darken($mainColor, 5%);
+    }
+}
+
+
+@mixin menuBtn-style{
+    color: $offWhiteColor;
+    padding: 0.9rem 1.5rem;
+    &:hover{
+        background-color: darken( $fourdColor, 7%);
+    }
+
+}
+
+@mixin search-box-style{
+    height: 35px;
+    width: 60%;
+    padding-left: 3rem;
+    border-radius: $button-radious;
+    border: 0.7px solid grey;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $thirdColor;
+        box-shadow: 8px 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+}
+
+@mixin search-icon-style{
+    padding: 0.5rem;
+    background-color: rgba(0,0,0,0);
+    color: $greyColor;
+    font-size: 17px;
+
+    position: absolute;
+    top: 21%;
+    right: 610px;
+    
+}
+
+@mixin fav-btn-style{
+    font-size: 25px;
+    color: $secondaryColor;
+
+    cursor: pointer;
+
+    &:hover{
+        font-size: 30px;
+        color: darken($secondaryColor, 10%);
+    }
+}

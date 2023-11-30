@@ -1,0 +1,101 @@
+@import './_variables';
+@import './_mixins';
+
+
+  
+  header{
+    height: auto;
+    background-color: $greyColor;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "logo search search logMenu"
+    "nav nav nav nav";
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .logo{
+    grid-area: logo;
+    width: 60%;
+    background-color: aqua;
+    height: 60px;
+    margin-top: 1rem;
+  }
+  .logMenu {
+    grid-area: logMenu;
+    height: 60px;
+    width: 60%;
+    margin-top: 1rem;
+  }
+
+  .userMenu{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+
+        h4{
+            color: $offWhiteColor;
+            
+        }
+
+        .bx-log-out-circle{
+            color: $offWhiteColor;
+            font-size: 25px;
+            cursor: pointer;
+            margin-left: 0.7rem;
+        }
+
+       
+  }
+
+ .bx-user{
+    font-size: 30px;
+    color: $offWhiteColor;
+    padding: 1rem;
+  }
+
+  .searchContainer{
+    grid-area: search;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1rem;
+      input{
+        @include search-box-style
+      }
+      i{
+        @include search-icon-style
+      }
+
+
+  }
+
+  nav{
+    grid-area: nav;
+    height: 48px;
+    background-color: $fourdColor;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+     ul{
+      width: 10%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+        li{
+          width: 100%;
+          a{
+            @include menuBtn-style
+          }
+        }
+     }
+  }
+

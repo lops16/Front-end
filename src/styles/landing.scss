@@ -1,0 +1,33 @@
+@import './_variables';
+@import './_mixins';
+
+
+.callAction{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.callRegister{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    
+}
+
+.btnReg{
+    @include btnReg-style;
+  }
+
+
+  .pinturaContainerLand{
+    display: grid;
+    padding: 0.7rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
