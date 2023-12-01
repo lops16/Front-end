@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/AddPintura.scss";
 
 const AddPintura = ({ onSubmit, onClose }) => {
 	const [formData, setFormData] = useState({
@@ -36,7 +37,7 @@ const AddPintura = ({ onSubmit, onClose }) => {
 	};
 
 	return (
-		<div className="pinturaContainer__card">
+		<div className="cardForm">
 			{/* Form fields */}
 
 			<input
@@ -88,8 +89,12 @@ const AddPintura = ({ onSubmit, onClose }) => {
 				placeholder="Paint Color Code"
 				onChange={handleInputChange}
 			/>
-			<button onClick={handleSubmit}>Add Paint</button>
-			<button onClick={onClose}>Cancel</button>
+			<button onClick={handleSubmit} className="btnAdd">
+				Add Paint
+			</button>
+			<button onClick={onClose} className="btnCloseAdd">
+				Cancel
+			</button>
 		</div>
 	);
 };

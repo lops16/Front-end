@@ -65,19 +65,21 @@ export default function Login() {
 						<h2>Inicia sesión</h2>
 
 						<div className="logContainer__log">
-							<input
-								onChange={handleInput}
-								type="text"
-								name="username"
-								placeholder="user"
-							/>
-							<input
-								onChange={handleInput}
-								type="password"
-								name="password"
-								placeholder="password"
-							/>
-							<button onClick={handleClick}>Login</button>
+							<form>
+								<input
+									onChange={handleInput}
+									type="text"
+									name="username"
+									placeholder="user"
+								/>
+								<input
+									onChange={handleInput}
+									type="password"
+									name="password"
+									placeholder="password"
+								/>
+								<button onClick={handleClick}>Login</button>
+							</form>
 						</div>
 						<div className="logBox">
 							<p>¿No tienes cuenta?</p>
@@ -88,10 +90,6 @@ export default function Login() {
 			</main>
 
 			{/* <p>{user.username}</p> */}
-
-			<div>
-				{/* <Link to="/register">No tienes cuenta? Registrate</Link> */}
-			</div>
 		</>
 	);
 }

@@ -1,0 +1,49 @@
+@import './_variables';
+@import './_mixins';
+
+.pinturaContainerUser{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding: 0.7rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    &__card{
+      background-color: white;
+      text-align: center;
+      border: solid black 1px;
+      border-radius: 0.7rem;
+      padding-top: 0.7rem;
+      
+    }
+    h2{
+        font-weight: $card-name-weight;
+        font-size: $card-name-size;
+        color: $font-main-color;
+    }
+
+    h3{
+        margin-top: 0.5rem;
+        font-weight: $card-brand-weight;
+        font-size: $card-brand-size;
+        color: $font-second-color;
+        display: inline-block;
+        padding-right: 0.5rem;
+    }
+
+    h4{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: $font-third-color;
+    }
+
+    
+  }
+
+  .usuariosTitle{
+    width: 20%;
+    border-bottom: 3px solid $fourdColor;
+   font-size: 30px;
+  margin: 1rem 0 1rem 4rem;
+}

@@ -5,19 +5,8 @@ const PinturaPopup = ({ pintura, onClose, isFavorite, handleFavClick }) => {
 	return (
 		<div className="popup" /* style={{ background: pintura.colorDisplay }} */>
 			<div className="popup-content">
-				<div className="imgContainer">
-					<img src={pintura.img} alt="" />
-				</div>
 				<div
-					className="colorDisplay"
-					style={{ background: pintura.colorDisplay }}
-				></div>
-				<h2>{pintura.name}</h2>
-				<h3>{pintura.brand}</h3>
-				<h3>{pintura.paintType}</h3>
-				<h4>{pintura.price} €</h4>
-				<div
-					className="favBtnContainer"
+					className="popup-content__favBtnContainer"
 					onClick={(e) => handleFavClick(e, pintura._id)}
 				>
 					{isFavorite(pintura._id) ? (
@@ -26,7 +15,22 @@ const PinturaPopup = ({ pintura, onClose, isFavorite, handleFavClick }) => {
 						<i className="bx bx-bookmark"></i>
 					)}
 				</div>
-				<button onClick={onClose}>Close</button>
+				<div className="popup-content__imgContainer">
+					<img src={pintura.img} alt="" />
+				</div>
+				<div
+					className="popup-content__colorDisplay"
+					style={{ background: pintura.colorDisplay }}
+				></div>
+
+				<div className="popup-content__info">
+					<h2>{pintura.name}</h2>
+					<h3>{pintura.brand}</h3>
+					<h3>{pintura.paintType}</h3>
+					<h4>{pintura.price} €</h4>
+				</div>
+
+				<button onClick={onClose}>X</button>
 			</div>
 		</div>
 	);

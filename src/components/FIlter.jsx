@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import "../styles/Filter.scss";
 
 const Filter = ({ brands, colors, onFilterChange, onColorFilterChange }) => {
+	const [noPaints, setNoPaints] = useState("");
+
+	if (!(brands.length || colors.length)) {
+		setNoPaints(<h3>No paints available.</h3>);
+	}
+
 	return (
 		<>
 			<div>
@@ -13,14 +20,21 @@ const Filter = ({ brands, colors, onFilterChange, onColorFilterChange }) => {
 					))}
 				</select>
 			</div>
-			<div>
-				<button onClick={() => onColorFilterChange("All")}>All</button>
-				{colors.map((color, index) => (
-					<button key={index} onClick={() => onColorFilterChange(color)}>
-						{color}
-					</button>
+			<div className="filterContainer__colorFilter">
+				<button className="allBtn" onClick={() => onColorFilterChange("All")}>
+					All
+				</button>
+				{colors.map((color, i) => (
+					<div className={`btnRing${color}`} key={i}>
+						<button
+							key={i}
+							className={color}
+							onClick={() => onColorFilterChange(color)}
+						></button>
+					</div>
 				))}
 			</div>
+			{noPaints}
 		</>
 	);
 };

@@ -231,7 +231,18 @@ const Pinturas = ({ searchValue }) => {
 				<div className="filterContainer">
 					<Filter
 						brands={uniqueBrands}
-						colors={["Red", "Green"]}
+						colors={[
+							"Red",
+							"Purple",
+							"Pink",
+							"Blue",
+							"Green",
+							"Yellow",
+							"Orange",
+							"Brown",
+							"White",
+							"Black",
+						]}
 						onFilterChange={handleFilterChange}
 						onColorFilterChange={handleColorFilterChange}
 					/>

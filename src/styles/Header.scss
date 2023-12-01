@@ -7,19 +7,27 @@
     height: auto;
     background-color: $greyColor;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "logo search search logMenu"
-    "nav nav nav nav";
+    "logo search search nav nav logMenu";
     gap: 2rem;
   }
   .logo{
     grid-area: logo;
-    width: 60%;
-    background-color: aqua;
-    height: 60px;
-    margin-top: 0.8rem;
+    width: 100%;
+    height: 100px;
+    margin-top: 0.2rem;
+    padding-left: 2rem;
+
+    a{
+      width: 100%;
+      height: 80px;
+    }
+
+     img{
+      width: 100%;
+      height: 100px;
+     }
   }
   .logMenu {
     grid-area: logMenu;
@@ -58,17 +66,13 @@
   .searchContainer{
     grid-area: search;
     width: 100%;
-    height: 60px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 1rem;
       input{
         @include search-box-style
-      }
-      i{
-        @include search-icon-style
       }
 
 
@@ -76,17 +80,16 @@
 
   nav{
     grid-area: nav;
-    height: 35px;
+    height: 100px;
     text-align: center;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 0.5rem;
 
 
     ul{
-      width: 10%;
+      width: 60%;
       display: flex;
       justify-content: space-around;
       align-items: center;

@@ -58,7 +58,7 @@ export default function Register() {
 							console.log(username);
 							setLoginUser(newUser);
 							setWelcomeMessage(
-								`Bienvenido a hobby pinturas, ${username}! puedes comenzar a crear tu biblioteca.`
+								`Bienvenido a Colorlog, ${username}! ya puedes comenzar a crear tu biblioteca.`
 							);
 							setTimeout(() => {
 								navigate("/pinturas");
@@ -87,39 +87,43 @@ export default function Register() {
 			<main>
 				<div className="regContainer">
 					<div className="regContainer__box">
-						<h2>Registrate</h2>
+						<div className="welcome">{welcomeMessage}</div>
+						{formVisible && <h2>Registrate</h2>}
+
 						<div className="regContainer__reg">
 							{formVisible && (
 								<>
-									<input
-										onChange={handleInput}
-										type="text"
-										name="mail"
-										placeholder="email"
-									/>
-									<input
-										onChange={handleInput}
-										type="text"
-										name="username"
-										placeholder="user"
-									/>
-									<input
-										onChange={handleInput}
-										type="password"
-										name="password"
-										placeholder="password"
-									/>
-									<button onClick={handleClick}>Register</button>
-									<div className="logBox">
-										<p>¿Ya tienes cuenta?</p>
-
-										<Link to={"/login"}>haz login</Link>
-									</div>
+									<form>
+										<input
+											onChange={handleInput}
+											type="text"
+											name="mail"
+											placeholder="email"
+										/>
+										<input
+											onChange={handleInput}
+											type="text"
+											name="username"
+											placeholder="user"
+										/>
+										<input
+											onChange={handleInput}
+											type="password"
+											name="password"
+											placeholder="password"
+										/>
+										<button onClick={handleClick}>Register</button>
+									</form>
 								</>
 							)}
-
-							<div>{welcomeMessage}</div>
 						</div>
+						{formVisible && (
+							<div className="logBox">
+								<p>¿Ya tienes cuenta?</p>
+
+								<Link to={"/login"}>haz login</Link>
+							</div>
+						)}
 					</div>
 				</div>
 			</main>

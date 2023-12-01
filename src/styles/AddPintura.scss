@@ -1,0 +1,24 @@
+@import './_variables';
+@import './_mixins';
+
+
+.cardForm{
+    width: 70%;
+    height: 372px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2rem;
+
+    input{
+        @include form-style
+    }
+}
+
+.btnAdd{
+    @include btnForm-style
+}
+.btnCloseAdd{
+    @include btnForm-cancel-style
+}
+

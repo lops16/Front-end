@@ -16,7 +16,7 @@ export default function Landing() {
 				<div className="landingContainer">
 					<div className="callAction">
 						<div className="callAction__callRegister">
-							<h1>Bienvenido Hobby Paints</h1>
+							<h1>Bienvenido Colorlog</h1>
 							<p>
 								La creciente web para los aficionados del modelismo, donde
 								podrás agregar a tu biblioteca la pinturas que ya tengas a tu

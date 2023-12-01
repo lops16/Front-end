@@ -1,0 +1,170 @@
+@import './_variables';
+@import './_mixins';
+
+
+.filterContainer{
+    width: 60%;
+    display: flex;
+    align-items: center;
+
+    select{
+       @include select-style;
+       margin-right: 2rem;
+    }
+
+    &__colorFilter{
+        width: 40%;
+        display: grid;
+        padding: 0.7rem;
+        grid-template-columns: repeat(11, 1fr);
+        gap: 3rem;
+        
+    }
+
+}
+
+.allBtn{
+    padding: 0 1rem;
+    border: none;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+
+    &:hover{
+        border-bottom: 2px solid $fourdColor
+    }
+}
+
+
+
+.btnRingRed{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color: $Red;
+    }
+}
+
+.Red{
+    @include btn-filter-style;
+    background-color: $Red;
+
+    
+}
+
+.btnRingPurple{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $Purple;
+    }
+}
+
+.Purple{
+    @include btn-filter-style;
+    background-color: $Purple;
+
+    
+}
+.btnRingPink{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $Pink;
+    }
+}
+
+.Pink{
+    @include btn-filter-style;
+    background-color: $Pink;
+
+    
+}
+.btnRingBlue{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $Blue;
+    }
+}
+
+.Blue{
+    @include btn-filter-style;
+    background-color: $Blue;
+
+    
+}
+.btnRingGreen{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $Green;
+    }
+}
+
+.Green{
+    @include btn-filter-style;
+    background-color: $Green;
+
+    
+}
+.btnRingYellow{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $Yellow;
+    }
+}
+
+.Yellow{
+    @include btn-filter-style;
+    background-color: $Yellow;
+
+    
+}
+.btnRingOrange{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $Orange;
+    }
+}
+
+.Orange{
+    @include btn-filter-style;
+    background-color: $Orange;
+
+    
+}
+.btnRingBrown{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $Brown;
+    }
+}
+
+.Brown{
+    @include btn-filter-style;
+    background-color: $Brown;
+
+    
+}
+.btnRingWhite{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $White;
+    }
+}
+
+.White{
+    @include btn-filter-style;
+    background-color: $White;
+
+    
+}
+.btnRingBlack{
+    @include btnRing-filter-style;
+    &:hover{
+        border-color:  $Black;
+    }
+}
+
+.Black{
+    @include btn-filter-style;
+    background-color: $Black;
+
+    
+}

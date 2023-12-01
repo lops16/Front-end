@@ -12,13 +12,69 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.285);
-    /* ... other styling properties ... */
+    background-color: rgba(36, 31, 31, 0.285);
   }
   
   .popup-content{
     background-color: white;
-    height: 250px;
-    width: 30%;
+    padding: 0.7rem;
+    border: 1px solid $fourdColor;
+    border-radius: $box-radious;
+    height: 400px;
+    width: 55%;
+    box-shadow: 11px 12px 15px -3px rgba(12, 8, 8, 0.301);
     display: flex;
+
+    &__imgContainer{
+      width: 70%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__colorDisplay{
+      width: 60%;
+    }
+
+    &__info{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 0.5rem;
+
+      h2{
+        font-weight: $card-name-weight;
+        font-size: $card-name-size;
+        color: $font-main-color;
+    }
+
+    h3{
+        font-weight: $card-brand-weight;
+        font-size: $card-brand-size;
+        color: $font-second-color;
+    }
+
+    h4{
+        color: $font-third-color;
+    }
+    }
+
+    &__favBtnContainer{
+      width: 10%;
+      height: 40px;
+      @include fav-btn-style
+    }
+
+    button{
+      @include close-btn-style
+    }
+
   }
+  

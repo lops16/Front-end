@@ -1,3 +1,11 @@
+import "../styles/app.scss";
+
 export default function Texturas() {
-	return <h2>aqui Texturas</h2>;
+	return (
+		<>
+			<div className="fondo">
+				<h2>COMING SOON</h2>
+			</div>
+		</>
+	);
 }

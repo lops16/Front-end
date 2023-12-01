@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/landing.scss";
 import { usePinturas } from "../hooks/usePinturas";
 import AddPintura from "./AddPintura";
+import "../styles/adminPanel.scss";
 
 export default function Admin() {
 	const { getPinturas, pinturas, deletePintura, addPintura } = usePinturas();
@@ -31,7 +32,7 @@ export default function Admin() {
 
 	return (
 		<>
-			<div className="pinturaContainerLand">
+			<div className="pinturaContainerAdmin">
 				{pinturas.map((pintura, i) => (
 					<>
 						<div key={i} className="pinturaContainer__card">
@@ -51,10 +52,12 @@ export default function Admin() {
 							></div>
 							<h2>{pintura.name}</h2>
 							<h3>{pintura.brand}</h3>
+							<h3>{pintura.paintType}</h3>
+							<h4>{pintura.price} €</h4>
 						</div>
 					</>
 				))}
-				<div className="pinturaContainer__card">
+				<div className="cardAdd">
 					<i className="bx bx-plus" onClick={handleAddPaintClick}></i>
 					{isFormVisible && (
 						<AddPintura

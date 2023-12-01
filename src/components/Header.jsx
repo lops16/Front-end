@@ -18,11 +18,11 @@ export default function Header({ onSearch }) {
 	return (
 		<header>
 			<div className="logo">
-				<Link to={loginUser ? "/pinturas" : "/"}>Logo aqui</Link>{" "}
+				<Link to={loginUser ? "/pinturas" : "/"}>
+					<img src="../../public/Colorlog-logo.png" alt="Your Logo Alt Text" />
+				</Link>{" "}
 			</div>
 			<div className="searchContainer">
-				<i className="bx bx-search"></i>
-
 				<input
 					type="text"
 					placeholder="Buscar pinturas"
@@ -33,11 +33,14 @@ export default function Header({ onSearch }) {
 				{loginUser !== null ? (
 					<>
 						<div className="userMenu">
-							<Link to={loginUser ? "/usuarios" : "/login"}>
+							<Link
+								to={
+									loginUser.username === "admin" ? "/adminPanel" : "/usuarios"
+								}
+							>
 								<i className="bx bx-user"></i>
 							</Link>
-
-							<h4>Bienvenido, {loginUser.username} </h4>
+							<h4>{loginUser.username} </h4>
 							<i className="bx bx-log-out-circle" onClick={handleLogout}></i>
 						</div>
 					</>
