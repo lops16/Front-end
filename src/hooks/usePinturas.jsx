@@ -8,7 +8,7 @@ export const usePinturas = () => {
 	const getPinturas = useCallback(
 		async (username, fetchRandom = false, count = 6) => {
 			try {
-				const url = `http://localhost:3000/api/pinturas?username=${username}`;
+				const url = `http://p01--back-end--rvdm5v2jrppy.code.run/api/pinturas?username=${username}`;
 				const paint = await fetchPinturas(url);
 
 				if (!fetchRandom) {
@@ -32,7 +32,7 @@ export const usePinturas = () => {
 	const deletePintura = async (name) => {
 		try {
 			const response = await fetch(
-				`http://localhost:3000/api/pinturas?name=${name}`,
+				`http://p01--back-end--rvdm5v2jrppy.code.run/api/pinturas?name=${name}`,
 				{
 					method: "DELETE",
 				}
@@ -54,14 +54,17 @@ export const usePinturas = () => {
 		});
 		paintData.price = Number(paintData.price);
 		try {
-			const response = await fetch("http://localhost:3000/api/pinturas/new", {
-				method: "POST",
-				headers: {
-					Authorization: `Bearer ${access_token}`,
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(paintData),
-			});
+			const response = await fetch(
+				"http://p01--back-end--rvdm5v2jrppy.code.run/api/pinturas/new",
+				{
+					method: "POST",
+					headers: {
+						Authorization: `Bearer ${access_token}`,
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(paintData),
+				}
+			);
 
 			if (!response.ok) {
 				throw new Error(`Failed to add new pintura: ${response.status}`);

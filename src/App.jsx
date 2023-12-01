@@ -12,6 +12,7 @@ import Register from "./components/Register";
 import Texturas from "./components/Texturas";
 import Usuarios from "./components/Usuarios";
 import Admin from "./components/AdminPanel";
+import Footer from "./components/Footer";
 
 function App() {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -37,6 +38,7 @@ function App() {
 						<Route path="/adminpanel" element={<Admin />}></Route>
 						{/* <Route path="*" element={<NotFound />}></Route> */}
 					</Routes>
+					<Footer />
 				</BrowserRouter>
 			</UserProvider>
 		</>

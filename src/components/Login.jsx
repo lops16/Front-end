@@ -14,11 +14,14 @@ export default function Login() {
 		try {
 			console.log("Handling click...");
 
-			const response = await fetch("http://localhost:3000/api/auth/login", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(user),
-			});
+			const response = await fetch(
+				"http://p01--back-end--rvdm5v2jrppy.code.run/api/auth/login",
+				{
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify(user),
+				}
+			);
 
 			console.log("Response received:", response);
 
