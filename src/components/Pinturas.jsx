@@ -6,7 +6,7 @@ import PinturaCard from "./PinturaCard";
 import "../styles/Pinturas.scss";
 
 // Constants
-const API_BASE_URL = "http://p01--back-end--rvdm5v2jrppy.code.run/api";
+const API_BASE_URL = "http://localhost:3000/api";
 const USER_API_URL = `${API_BASE_URL}/users`;
 const PINTURAS_API_URL = `${API_BASE_URL}/pinturas`;
 

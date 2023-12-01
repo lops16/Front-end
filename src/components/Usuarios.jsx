@@ -12,7 +12,7 @@ const UserComponent = ({ username }) => {
 		const fetchFavoritePaints = async () => {
 			try {
 				const response = await fetch(
-					`http://p01--back-end--rvdm5v2jrppy.code.run/api/users/${username}`,
+					`http://localhost:3000/api/users/${username}`,
 					{
 						method: "GET",
 						headers: {
@@ -43,17 +43,14 @@ const UserComponent = ({ username }) => {
 			try {
 				/* await fetchFavoritePaints(); */
 				console.log(favoritePaints);
-				const response = await fetch(
-					"http://p01--back-end--rvdm5v2jrppy.code.run000/api/pinturas/fav",
-					{
-						method: "POST",
-						headers: {
-							Authorization: `Bearer ${access_token}`,
-							"Content-Type": "application/json",
-						},
-						body: JSON.stringify(paintsFav),
-					}
-				);
+				const response = await fetch("http://localhost:3000/api/pinturas/fav", {
+					method: "POST",
+					headers: {
+						Authorization: `Bearer ${access_token}`,
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(paintsFav),
+				});
 				const responseData = await response.json();
 				console.log("Response Data:", responseData);
 				setPrintFavPaints(responseData);

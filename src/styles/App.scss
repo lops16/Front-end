@@ -76,7 +76,10 @@ img{
 
 Footer{
   height: 60px;
+  width: 100%;
   background-color: $greyColor;
+  display: flex;
+  justify-content: space-around;
 
   h4{
     color: $offWhiteColor;

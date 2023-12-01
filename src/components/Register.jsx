@@ -25,29 +25,23 @@ export default function Register() {
 		e.preventDefault();
 		const { mail, ...userDataWithoutEmail } = newUser;
 		try {
-			const response = await fetch(
-				"http://p01--back-end--rvdm5v2jrppy.code.run/api/auth/register",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(userDataWithoutEmail),
-				}
-			);
+			const response = await fetch("http://localhost:3000/api/auth/register", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(userDataWithoutEmail),
+			});
 
 			if (response.ok) {
 				try {
 					console.log("Handling click...");
 
-					const response = await fetch(
-						"http://p01--back-end--rvdm5v2jrppy.code.run/api/auth/login",
-						{
-							method: "POST",
-							headers: { "Content-Type": "application/json" },
-							body: JSON.stringify(newUser),
-						}
-					);
+					const response = await fetch("http://localhost:3000/api/auth/login", {
+						method: "POST",
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify(newUser),
+					});
 
 					console.log("Response received:", response);
 

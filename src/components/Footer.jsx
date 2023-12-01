@@ -4,7 +4,7 @@ export default function Footer() {
 	return (
 		<>
 			<footer>
-				<h4>Made by Lops - 2023 </h4>;
+				<h4>Made by Lops</h4>;<h4>2023 </h4>
 			</footer>
 		</>
 	);
